@@ -2,8 +2,12 @@ import { Redirect, Route } from 'react-router-dom';
 import React from 'react';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import Login from './pages/Login';
 import Index from './pages/index'; // Assuming this is where your Index component is located
+import Index2 from './pages/index2'; 
+import VersionPrompt from './pages/VersionPrompt';
 import ModulesPage from './pages/ModulesPage';
+import FullModules from './pages/FullModules';
 import ChildAdolescentPage from './pages/ChildAdolescentPage';
 import DisordersDueToSubstanceUsePage from './pages/DisordersDueToSubstanceUsePage';
 import DescriptionC from './pages/DescriptionC';
@@ -60,11 +64,23 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+      <Route exact path="/Login">
+          <Login />
+        </Route>
+      <Route exact path="/VersionPrompt">
+          <VersionPrompt />
+        </Route>
         <Route exact path="/index">
           <Index />
         </Route>
+        <Route exact path="/index2">
+          <Index2 />
+        </Route>
         <Route exact path="/ModulesPage">
           <ModulesPage />
+        </Route>
+        <Route exact path="/FullModules">
+          <FullModules />
         </Route>
         <Route exact path="/ChildAdolescentPage">
           <ChildAdolescentPage />
@@ -126,10 +142,11 @@ const App: React.FC = () => (
         <Route exact path="/CDAProtocolsPage6">
           <CDAProtocolsPage6/>
         </Route>
-        <Redirect exact from="/" to="/index" />
+        <Redirect exact from="/" to="/Login" />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
+
 
 export default App;
