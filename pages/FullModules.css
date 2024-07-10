@@ -1,0 +1,24 @@
+/* ModulesPage.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.module {
+  color: white;
+  border-radius: 10px;
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ion-card-content {
+  color: white; /* Ensures the text inside the card is white */
+}
+
+  
