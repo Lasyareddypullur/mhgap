@@ -9,6 +9,8 @@ import VersionPrompt from './pages/VersionPrompt';
 import ModulesPage from './pages/ModulesPage';
 import FullModules from './pages/FullModules';
 import ChildAdolescentPage from './pages/ChildAdolescentPage';
+import ShVerChildAdolescentPage from './pages/ShVerChildAdolescentPage';
+import ShVerSubstanceUsePage from './pages/ShVerSubstanceUsePage';
 import DisordersDueToSubstanceUsePage from './pages/DisordersDueToSubstanceUsePage';
 import DescriptionC from './pages/DescriptionC';
 import AssessmentC from './pages/AssessmentC';
@@ -28,6 +30,16 @@ import CDAProtocolsPage3 from './pages/CDAProtocolsPage3';
 import CDAProtocolsPage4 from './pages/CDAProtocolsPage4';
 import CDAProtocolsPage5 from './pages/CDAProtocolsPage5';
 import CDAProtocolsPage6 from './pages/CDAProtocolsPage6';
+import ManagementS from './pages/ManagementS';
+import SpecialPopulationsSubstanceUse from './pages/SUSpecialPopulations';
+import ClinicalTipPage from './pages/SUClinicalTip';
+import SUAdolescentsPage from './pages/SUAdolescents';
+import SUWomen from './pages/SUWomen';
+import SUWomenAlcohol from './pages/SUWomenAlcohol';
+import ShVerSUAssessmentPage from './pages/ShVerSUAssessment';
+import ShVerCADAssessment from './pages/ShVerCADAssessment';
+import ShVerSUBox1 from './pages/ShVerSUBox1';
+import Home from './pages/Home';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -57,6 +69,8 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import SUSpecialPopulations from './pages/SUSpecialPopulations';
+import ShVerSUAssessment from './pages/ShVerSUAssessment';
 
 setupIonicReact();
 
@@ -142,11 +156,45 @@ const App: React.FC = () => (
         <Route exact path="/CDAProtocolsPage6">
           <CDAProtocolsPage6/>
         </Route>
+        <Route exact path="/ManagementS">
+          <ManagementS/>
+        </Route>
+        <Route exact path="/SUSpecialPopulations">
+          <SpecialPopulationsSubstanceUse/>
+        </Route>
+        <Route exact path="/SUClinicalTIp">
+          <ClinicalTipPage/>
+        </Route>
+        <Route exact path="/SUAdolescents">
+          <SUAdolescentsPage/>
+        </Route>
+        <Route exact path="/SUWomen">
+          <SUWomen/>
+        </Route>
+        <Route exact path="/SUWomenAlcohol">
+          <SUWomenAlcohol/>
+        </Route>
+        <Route exact path="/ShVerChildAdolescentPage">
+          <ShVerChildAdolescentPage/>
+        </Route>
+        <Route exact path="/ShVerSubstanceUsePage">
+          <ShVerSubstanceUsePage/>
+        </Route>
+        <Route exact path="/ShVerSUAssessment">
+          <ShVerSUAssessmentPage/>
+        </Route>
+        <Route exact path="/ShVerCADAssessment">
+          <ShVerCADAssessment/>
+        </Route>
+        <Route exact path="/ShVerSUBox1">
+          <ShVerSUBox1/>
+        </Route>
+        <Route exact path="/Home">
+          <Home/>
+        </Route>
+      
         <Redirect exact from="/" to="/Login" />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
-
-
-export default App;
